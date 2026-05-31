@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     for i in range(1000):
         player, action = next(event_gen)
-        print(f"Event {i}: Player {player}, did action {action}")
+        print(f"Event {i}: Player {player} did action {action}")
 
     ten_events = []
     for i in range(10):
@@ -38,7 +38,6 @@ if __name__ == "__main__":
 
     print(f"Built list of 10 event: {ten_events}")
 
-    consume_event_gen = consume_event(ten_events)
-    for i in range(10):
-        print(f"Got event from list: {next(consume_event_gen)}")
+    for event in consume_event(ten_events):
+        print(f"Got event from list: {event}")
         print(f"Remains in list: {ten_events}")

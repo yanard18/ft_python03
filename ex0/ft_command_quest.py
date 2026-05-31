@@ -10,6 +10,7 @@ def print_args() -> None:
 
     if not user_args:
         print("No arguments provided!")
+        print(f"Total arguments: {len(sys.argv)}")
         return
 
     print(f"Arguments received: {len(user_args)}")

@@ -37,8 +37,6 @@ def get_pos() -> tuple[float, float, float]:
     while True:
         try:
             pos = get_pos_input()
-            print(f"Got a first tuple: {pos}")
-            print(f"It includes: X={pos[0]} Y={pos[1]} Z={pos[2]}")
             return pos
         except Exception as e:
             print(f"{e}")
@@ -47,6 +45,8 @@ def get_pos() -> tuple[float, float, float]:
 def get_player_pos() -> None:
     print("Got a first set of coordinates")
     p1 = get_pos()
+    print(f"Got a first tuple: {p1}")
+    print(f"It includes: X={p1[0]} Y={p1[1]} Z={p1[2]}")
 
     print(f"Distance to center: {round(distance(p1, (0, 0, 0)), 4)}\n")
 
