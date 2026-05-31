@@ -36,7 +36,7 @@ if __name__ == "__main__":
     for i in range(10):
         ten_events.append(next(event_gen))
 
-    print(f"Built list of 10 event: {ten_events}")
+    print(f"Built list of 10 events: {ten_events}")
 
     for event in consume_event(ten_events):
         print(f"Got event from list: {event}")
